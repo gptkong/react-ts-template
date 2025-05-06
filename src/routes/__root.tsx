@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
@@ -6,10 +7,10 @@ export const Route = createRootRoute({
     <>
       <div className="p-2 flex gap-2">
         <Link to="/" className="[&.active]:font-bold">
-          Home
+          <Button>首页</Button>
         </Link>{' '}
         <Link to="/about" className="[&.active]:font-bold">
-          About
+          <Button>关于</Button>
         </Link>
       </div>
       <hr />
