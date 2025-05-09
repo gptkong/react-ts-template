@@ -40,7 +40,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="fixed top-14 left-0 hidden h-[calc(100vh-3.5rem)] border-r bg-background lg:block w-64">
+    <Sidebar className="top-20">
       <SidebarContent className="p-4">
         <SidebarGroup>
           <SidebarGroupLabel className="text-sm font-medium text-muted-foreground">
