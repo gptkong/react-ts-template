@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Home, FileText, LucideIcon } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -10,39 +10,38 @@ import {
   SidebarMenuItem,
 } from "../ui/sidebar";
 import { Link, useRouter } from "@tanstack/react-router";
+import { routeTree } from "@/routeTree.gen";
 
-// 路由配置
-const routes = [
-  {
-    title: "首页",
-    path: "/",
-    icon: Home,
-  },
-  {
-    title: "关于",
-    path: "/about",
-    icon: Inbox,
-  },
-  {
-    title: "日历",
-    path: "/calendar",
-    icon: Calendar,
-  },
-  {
-    title: "搜索",
-    path: "/search",
-    icon: Search,
-  },
-  {
-    title: "设置",
-    path: "/settings",
-    icon: Settings,
-  },
-];
+// 路由图标映射
+const routeIcons: Record<string, LucideIcon> = {
+  "/": Home,
+  "/about": FileText,
+};
+
+// 路由标题映射
+const routeTitles: Record<string, string> = {
+  "/": "首页",
+  "/about": "关于",
+};
 
 export function AppSidebar() {
   const router = useRouter();
   const currentPath = router.state.location.pathname;
+
+  // 从路由树中获取子路由
+  const routes = Object.entries(routeTree.children || {})
+    .filter(([key]) => key !== "__root__")
+    .map(([_, route]) => ({
+      path: route.path,
+      title: routeTitles[route.path] || route.path,
+      icon: routeIcons[route.path] || Home,
+    }))
+    .sort((a, b) => {
+      // 确保首页始终在第一位
+      if (a.path === "/") return -1;
+      if (b.path === "/") return 1;
+      return a.path.localeCompare(b.path);
+    });
 
   return (
     <Sidebar className="top-20">
