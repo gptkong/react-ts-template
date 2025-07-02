@@ -48,6 +48,7 @@
     "@tanstack/react-router": "^1.117.1",
     "@tanstack/react-router-devtools": "^1.117.1",
     "@tanstack/react-table": "^8.21.3",
+    "@types/markdown-it": "^14.1.2",
     "@uidotdev/usehooks": "^2.4.1",
     "@xyflow/react": "^12.6.1",
     "ahooks": "^3.8.5",
