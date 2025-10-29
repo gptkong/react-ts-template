@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/charts": "^2.6.6",
     "@ant-design/pro-components": "^2.8.9",
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@ant-design/x": "^1.2.0",
+    "@antv/g2plot": "^2.4.35",
     "@antv/gpt-vis": "^0.4.7",
     "@douyinfe/semi-ui": "^2.78.0",
     "@gsap/react": "^2.1.2",
