@@ -11,6 +11,12 @@ importers:
       '@ant-design/charts':
         specifier: ^2.6.6
         version: 2.6.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(workerize-loader@2.0.2(webpack@5.102.1))
+      '@ant-design/graphs':
+        specifier: ^2.1.1
+        version: 2.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(workerize-loader@2.0.2(webpack@5.102.1))
+      '@ant-design/plots':
+        specifier: ^2.6.6
+        version: 2.6.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@ant-design/pro-components':
         specifier: ^2.8.9
         version: 2.8.10(antd@5.27.6(date-fns@3.6.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(rc-field-form@2.7.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
